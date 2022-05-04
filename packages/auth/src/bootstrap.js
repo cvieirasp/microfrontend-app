@@ -21,11 +21,11 @@ const mount = (element, { onNavigate, defaultHistory, initialPath }) => {
       if (pathname !== location.pathname)
         history.push(location.pathname);
     },
-  }
+  };
 };
 
 if (process.env.NODE_ENV === 'development') {
-  const devRoot = document.querySelector('#_marketing-dev-root');
+  const devRoot = document.querySelector('#_auth-dev-root');
   if (devRoot) {
     mount(devRoot, { defaultHistory: createBrowserHistory() });
   }
